@@ -52,11 +52,10 @@ public class Player_Movement : MonoBehaviour{
 		ResetNumberOfJump();
 		CheckIfPlayerGrounded();
 		GravityDrag();
+		// Speedup()
 
 		Debug.DrawRay(this.transform.position, -transform.up, Color.green);
 	}
-
-
 
 
 	//This function calculate the speed limitation of the player depending of how far he is from the center of Gravity.
