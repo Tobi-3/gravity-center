@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 3340378101270038814}
   - component: {fileID: 3340378101270038804}
   - component: {fileID: 3340378101270038803}
-  m_Layer: 0
+  - component: {fileID: 4801266610198137696}
+  m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,9 +50,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bc567ce943bc849b71079650656a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CenterOfGravity: {fileID: 0}
+  CenterOfGravity: {fileID: 700318536606103927, guid: cf8d8c443663d3a46a3f1949ee48564b,
+    type: 3}
   GravityForce: 1
-  PlayerSpeed: 10
+  PlayerSpeed: 5
   MaxSpeed: 10
   JumpSpeed: 1
   NumberOfJump: 2
@@ -185,3 +187,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4801266610198137696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3340378101270038813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a71c8b5108d0c41b57aeae107114ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCamera: {fileID: 0}
+  MainCamera: {fileID: 0}

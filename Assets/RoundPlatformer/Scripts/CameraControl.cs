@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
+public class CameraControl : MonoBehaviour
 {
 
     [SerializeField] public Camera PlayerCamera;
@@ -10,8 +10,8 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MainCamera.enabled = true;
-        PlayerCamera.enabled = !MainCamera.enabled;
+        PlayerCamera.enabled = true;
+        MainCamera.enabled = !PlayerCamera.enabled;
     }
 
     // Update is called once per frame
@@ -19,8 +19,8 @@ public class CameraMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            MainCamera.enabled = !MainCamera.enabled;
             PlayerCamera.enabled = !PlayerCamera.enabled;
+            MainCamera.enabled = !MainCamera.enabled;
         }
     }
 }
