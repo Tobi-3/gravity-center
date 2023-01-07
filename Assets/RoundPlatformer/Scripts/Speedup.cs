@@ -8,16 +8,14 @@ public class Speedup : MonoBehaviour
     public float SpeedCooldown;
 	private float NormalSpeed;
 	public float BoostedSpeed;
-    private float coeffSpeedUp = 1.0f;
-    
+
     private Player_Movement Player;
-    // float move = Input.GetAxis ("Horizontal") * coeffSpeedUp;
 
     // Start is called before the first frame update
     void Start()
     {   
         Player = GameObject.Find ("Player").GetComponent<Player_Movement>();    
-        NormalSpeed = 5;
+        NormalSpeed = Player.PlayerSpeed;
     }
 
     // Update is called once per frame
@@ -36,9 +34,6 @@ public class Speedup : MonoBehaviour
             GetComponent<CircleCollider2D>().enabled = false;
 
             StartCoroutine("SpeedDuration");
-            
-            
-            // other.GetComponent<Player_Movement>().PlayerSpeed = 5;
         }
       
 
@@ -48,7 +43,7 @@ public class Speedup : MonoBehaviour
 
 	IEnumerator SpeedDuration () {
 		yield return new WaitForSeconds(SpeedCooldown);
-		Player.PlayerSpeed = 5;
+		Player.PlayerSpeed = NormalSpeed;
         Destroy(gameObject);
 	}
 }

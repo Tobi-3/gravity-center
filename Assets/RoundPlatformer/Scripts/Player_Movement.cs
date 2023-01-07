@@ -17,14 +17,14 @@ public class Player_Movement : MonoBehaviour{
 	public float JumpSpeed;
 
 	[Tooltip("For Double Jump or more. Set to 1 for a single jump")]
-	public int NumberOfJump;
-	private int JumpCount;
+	public int NumberOfJumps;
 	private bool IsGrounded;
+	private int JumpCount;
 	private float distToGround;
 	private Collider2D collider;
 	public LayerMask GroundedMask;
 	
-	private Rigidbody2D RB2B;
+	private Rigidbody2D RB2D;
 	
 
 	private SpriteRenderer PlayerSpriteRenderer;
@@ -34,13 +34,13 @@ public class Player_Movement : MonoBehaviour{
 
 
 	void Start() {
-		RB2B = GetComponent<Rigidbody2D>();
+		RB2D = GetComponent<Rigidbody2D>();
 		PlayerSpriteRenderer = GetComponent<SpriteRenderer>();
 		anim = GetComponent<Animator>();
 
 		collider = GetComponent<Collider2D>();
 		distToGround = collider.bounds.extents.y;
-		JumpCount = NumberOfJump;
+		JumpCount = NumberOfJumps;
 	}
 
 
@@ -49,11 +49,9 @@ public class Player_Movement : MonoBehaviour{
 		On_PlayerMovement();
 		On_PlayerJump();
 		MirrorAnimationPlayer();
-		ResetNumberOfJump();
 		CheckIfPlayerGrounded();
+		ResetNumberOfJumps();
 		GravityDrag();
-		// Speedup()
-
 		Debug.DrawRay(this.transform.position, -transform.up, Color.green);
 	}
 
@@ -75,13 +73,13 @@ public class Player_Movement : MonoBehaviour{
 			return speedLimitation;
 			
 		}
-		else{ return 1; } //If the player don't have gravity center, no speed limitation is set.
+		else{ return 1; } //If the player doesn't have a gravity center, no speed limitation is set.
 	}
 
 
 	private void GravityDrag(){
 		if(CenterOfGravity != null){
-			RB2B.AddForce((CenterOfGravity.transform.position - transform.position) * GravityForce);
+			RB2D.AddForce((CenterOfGravity.transform.position - transform.position) * GravityForce);
 			Vector3 dif = CenterOfGravity.transform.position - transform.position;
 			float RotationZ = Mathf.Atan2(dif.y , dif.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.Euler(0.0F, 0.0F, RotationZ + 90);
@@ -89,24 +87,21 @@ public class Player_Movement : MonoBehaviour{
 	}
 
 
-
-
-
 	private void On_PlayerMovement(){
 		if(Input.GetAxis("Horizontal") != 0){
 			Vector2 localvelocity;
-			localvelocity = transform.InverseTransformDirection(RB2B.velocity);
+			localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 			localvelocity.x = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerSpeed * 100 * CalculateAngularSpeedLimitation();
-			RB2B.velocity = transform.TransformDirection(localvelocity);
+			RB2D.velocity = transform.TransformDirection(localvelocity);
 
 			anim.SetBool("PlayerMoving", true);
 		}
 		else { //Slow down the player when no pressure on the Horizontal Axis (For more responsive controls).
 			
 			Vector2 localvelocity;
-			localvelocity = transform.InverseTransformDirection(RB2B.velocity);
+			localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 			localvelocity.x = localvelocity.x * 0.5F;
-			RB2B.velocity = transform.TransformDirection(localvelocity);
+			RB2D.velocity = transform.TransformDirection(localvelocity);
 
 			anim.SetBool("PlayerMoving", false);
 		}
@@ -114,13 +109,13 @@ public class Player_Movement : MonoBehaviour{
 
 	private void On_PlayerJump(){
 		if(Input.GetButtonDown("Jump")){
-			if(JumpCount != 0){
+			if(JumpCount > 0){
+				JumpCount--;
 				Vector2 localvelocity;
-				localvelocity = transform.InverseTransformDirection(RB2B.velocity);
+				localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 				localvelocity.y = 0;
-				RB2B.velocity = transform.TransformDirection(localvelocity);
-				JumpCount --;
-				RB2B.AddRelativeForce(new Vector2(0,1) * JumpSpeed * 10, ForceMode2D.Impulse);
+				RB2D.velocity = transform.TransformDirection(localvelocity);
+				RB2D.AddRelativeForce(new Vector2(0,1) * JumpSpeed * 10, ForceMode2D.Impulse);
 			}
 		}
 	}
@@ -128,7 +123,8 @@ public class Player_Movement : MonoBehaviour{
 
 	private void CheckIfPlayerGrounded(){
 		
-		if (isGrounded()) {
+		if (isGrounded()) 
+		{	
 			IsGrounded = true;
 			anim.SetBool("PlayerJumping", false);
 		}
@@ -139,20 +135,29 @@ public class Player_Movement : MonoBehaviour{
 	}
 
 
-	private bool isGrounded(){
-		if(Physics2D.Raycast(transform.position, -transform.up, 1F, GroundedMask, -Mathf.Infinity, Mathf.Infinity)){
-			return true;
-		}
-		return false;
+	private bool isGrounded2(){
+		CapsuleCollider2D capsule = GetComponent<CapsuleCollider2D>();
+		float rotation = transform.rotation.z;
+		
+		Vector2 bottomPoint = rotation * (capsule.bounds.center - capsule.bounds.extents.y * (capsule.bounds.center - CenterOfGravity.transform.position).normalized) ;
+		
+		return Physics2D.CapsuleCast(bottomPoint, capsule.size, capsule.direction, rotation, -transform.up, 1f, GroundedMask).collider != null;
 	}
 
 
+	private bool isGrounded(){
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 0.9f, GroundedMask);
+
+		return  hit.collider != null;
+	}
+
+	
 
 	//Below this point, The script is doing normal stuff (like animation)//
 
 
 	private void MirrorAnimationPlayer(){
-		Vector2 localVelocity = transform.InverseTransformDirection(RB2B.velocity);
+		Vector2 localVelocity = transform.InverseTransformDirection(RB2D.velocity);
 
 		if(localVelocity.x > 0.5F){
 			if(PlayerSpriteRenderer.flipX == true){
@@ -167,12 +172,16 @@ public class Player_Movement : MonoBehaviour{
 	}
 	
 
-
-	private void ResetNumberOfJump(){
-		if(JumpCount < NumberOfJump){
-			if(IsGrounded){
-				JumpCount = NumberOfJump;
-			}
+	private void ResetNumberOfJumps()
+	{	
+		if (IsGrounded) 
+		{
+			anim.SetBool("PlayerJumping", false);
+			Debug.Log($"Resetted Jumpcount from: {JumpCount}");
+			JumpCount = NumberOfJumps;
+		}
+		else {
+			anim.SetBool("PlayerJumping", true);
 		}
 	}
 }
