@@ -115,5 +115,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 095d6d4878516b048b912dead5efd187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedCooldown: 5
-  BoostedSpeed: 20
+  SpeedCooldown: 10
+  BoostedSpeed: 10

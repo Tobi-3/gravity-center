@@ -56,7 +56,7 @@ MonoBehaviour:
   PlayerSpeed: 5
   MaxSpeed: 10
   JumpSpeed: 1
-  NumberOfJump: 2
+  NumberOfJumps: 1
   GroundedMask:
     serializedVersion: 2
     m_Bits: 512
