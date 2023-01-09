@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +15,8 @@ public class Player_Movement : MonoBehaviour{
 	public float PlayerSpeed;
 	public float MaxSpeed;
 	public float JumpSpeed;
+	public bool isMoving;
+	public bool isJumping;
 
 	[Tooltip("For Double Jump or more. Set to 1 for a single jump")]
 	public int NumberOfJumps;
@@ -30,7 +32,6 @@ public class Player_Movement : MonoBehaviour{
 	private SpriteRenderer PlayerSpriteRenderer;
 	private Animator anim;
 	private float AngularSpeedLimitation;
-
 
 
 	void Start() {
