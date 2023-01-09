@@ -52,9 +52,9 @@ public class MeteorGeneration : MonoBehaviour
     }
 
     //destroy a meteor if it hits the center
-    private void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {   
-        if (collider.gameObject.tag == "Meteor")
+        if (collider.CompareTag("Meteor"))
         {
             meteors.Remove(collider.gameObject);
             Destroy(collider.gameObject);
@@ -64,7 +64,7 @@ public class MeteorGeneration : MonoBehaviour
     // creates a new meteor GameObject 
     private void GenerateMeteor(float size, Vector3 position)
     {   
-        if (meteors.Count <=maxMeteorAmount)
+        if (meteors.Count < maxMeteorAmount)
         {
             GameObject newMeteor = Instantiate(MeteorPrefab, position, Quaternion.identity);
             newMeteor.transform.localScale = new Vector3(size,size,size);
