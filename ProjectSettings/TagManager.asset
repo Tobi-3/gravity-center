@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Meteor
+  - GravityObject
   layers:
   - Default
   - TransparentFX
@@ -12,11 +14,11 @@ TagManager:
   - Water
   - UI
   - Center
-  - Comets
+  - Meteors
   - PostProcessing
   - RoundPlatform
   - Player
-  - 
+  - Shield
   - 
   - 
   - 
