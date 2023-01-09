@@ -23,7 +23,7 @@ public class Player_Movement : MonoBehaviour{
 	private bool IsGrounded;
 	private int JumpCount;
 	private float distToGround;
-	private Collider2D collider;
+	private Collider2D col;
 	public LayerMask GroundedMask;
 	
 	private Rigidbody2D RB2D;
@@ -39,9 +39,9 @@ public class Player_Movement : MonoBehaviour{
 		PlayerSpriteRenderer = GetComponent<SpriteRenderer>();
 		anim = GetComponent<Animator>();
 
-		collider = GetComponent<Collider2D>();
-		distToGround = collider.bounds.extents.y;
-		JumpCount = NumberOfJumps;
+		col = GetComponent<Collider2D>();
+		distToGround = col.bounds.extents.y;
+		JumpCount = 0;
 	}
 
 
@@ -55,7 +55,7 @@ public class Player_Movement : MonoBehaviour{
 		GravityDrag();
 		Debug.DrawRay(this.transform.position, -transform.up, Color.green);
 	}
-
+	
 
 	//This function calculate the speed limitation of the player depending of how far he is from the center of Gravity.
 	//This will prevent the player from flying if he goes too fast, too close from the center of gravity 
@@ -67,7 +67,8 @@ public class Player_Movement : MonoBehaviour{
 
 			distance = Vector3.Distance(transform.position, CenterOfGravity.transform.position);
 			distance = distance/10;
-
+			Debug.Log($"distance: {distance}");
+			// Debug.Break();
 			speedLimitation = Mathf.Lerp(0.5F, 2F, distance);
 			speedLimitation = speedLimitation/5;
 
@@ -110,12 +111,13 @@ public class Player_Movement : MonoBehaviour{
 
 	private void On_PlayerJump(){
 		if(Input.GetButtonDown("Jump")){
-			if(JumpCount > 0){
-				JumpCount--;
+			if(JumpCount < NumberOfJumps){
+				JumpCount++;
 				Vector2 localvelocity;
 				localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 				localvelocity.y = 0;
 				RB2D.velocity = transform.TransformDirection(localvelocity);
+
 				RB2D.AddRelativeForce(new Vector2(0,1) * JumpSpeed * 10, ForceMode2D.Impulse);
 			}
 		}
@@ -177,14 +179,9 @@ public class Player_Movement : MonoBehaviour{
 
 	private void ResetNumberOfJumps()
 	{	
-		if (IsGrounded) 
+		if (IsGrounded && JumpCount > 0) 
 		{
-			anim.SetBool("PlayerJumping", false);
-			Debug.Log($"Resetted Jumpcount from: {JumpCount}");
-			JumpCount = NumberOfJumps;
-		}
-		else {
-			anim.SetBool("PlayerJumping", true);
+			JumpCount = 0;
 		}
 	}
 }

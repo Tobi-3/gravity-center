@@ -11,8 +11,7 @@ public class ShieldPowerup : MonoBehaviour
     void Start()
     {   
         ShieldObject = GameObject.FindWithTag("Shield");  
-        // Player = GameObject.Find ("Player").GetComponent<Player_Movement>();    
-
+        
         //disable the shield if the power up hasn't been collected/wears off
         ShieldObject.GetComponent<SpriteRenderer>().enabled = false;
         ShieldObject.GetComponent<CircleCollider2D>().enabled = false;
