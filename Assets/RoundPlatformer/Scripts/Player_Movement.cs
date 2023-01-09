@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -94,7 +94,7 @@ public class Player_Movement : MonoBehaviour{
 			localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 			localvelocity.x = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerSpeed * 100 * CalculateAngularSpeedLimitation();
 			RB2D.velocity = transform.TransformDirection(localvelocity);
-
+			isMoving = true;
 			anim.SetBool("PlayerMoving", true);
 		}
 		else { //Slow down the player when no pressure on the Horizontal Axis (For more responsive controls).
@@ -103,7 +103,7 @@ public class Player_Movement : MonoBehaviour{
 			localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 			localvelocity.x = localvelocity.x * 0.5F;
 			RB2D.velocity = transform.TransformDirection(localvelocity);
-
+			isMoving = false;
 			anim.SetBool("PlayerMoving", false);
 		}
 	}
@@ -127,10 +127,12 @@ public class Player_Movement : MonoBehaviour{
 		if (isGrounded()) 
 		{	
 			IsGrounded = true;
+			isJumping = false;
 			anim.SetBool("PlayerJumping", false);
 		}
 		else {
 			IsGrounded = false;
+			isJumping = true;
 			anim.SetBool("PlayerJumping", true);
 		}
 	}
