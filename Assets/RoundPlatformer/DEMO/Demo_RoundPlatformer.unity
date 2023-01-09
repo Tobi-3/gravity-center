@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -128,7 +128,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1328198117568519541, guid: b4f334b431a190c45b135dc6172c86c0,
@@ -192,7 +191,6 @@ PrefabInstance:
       value: ShieldPowerUp (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f334b431a190c45b135dc6172c86c0, type: 3}
 --- !u!1 &32716835
 GameObject:
@@ -258,7 +256,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &32716838
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -358,13 +355,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &32716839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +464,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &36350162
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -593,13 +586,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &36350163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,7 +761,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &60384022
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -866,13 +855,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &60384023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -955,7 +941,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &112996618
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1055,13 +1040,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &112996619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,7 +1180,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &346298091
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1313,13 +1294,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &346298092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,7 +1390,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &355933138
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1522,13 +1499,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &355933139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,7 +1526,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1328198117568519541, guid: b4f334b431a190c45b135dc6172c86c0,
@@ -1616,7 +1589,6 @@ PrefabInstance:
       value: ShieldPowerUp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f334b431a190c45b135dc6172c86c0, type: 3}
 --- !u!1 &645098105
 GameObject:
@@ -1696,7 +1668,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1736,6 +1707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oxygenSystem: {fileID: 1991369393}
   _oxygenBar: {fileID: 1369282028}
+  _oxygenPercentage: {fileID: 1614710758}
 --- !u!4 &767592350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6021050379952396480, guid: 58fd8678359d8c247af42bd90ac227ce,
@@ -1810,7 +1782,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &768840434
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1914,13 +1885,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &768840435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,7 +1977,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &787033702
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2115,13 +2082,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &787033703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,6 +2134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2212,7 +2177,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 700318536606103926, guid: cf8d8c443663d3a46a3f1949ee48564b,
@@ -2276,7 +2240,6 @@ PrefabInstance:
       value: CenterOfGravity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: cf8d8c443663d3a46a3f1949ee48564b, type: 3}
 --- !u!1 &1030440691
 GameObject:
@@ -2521,7 +2484,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1951301259604458476, guid: 59ef19185a9b6284582346445ba9a153,
@@ -2585,7 +2547,6 @@ PrefabInstance:
       value: Speedup (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ef19185a9b6284582346445ba9a153, type: 3}
 --- !u!1 &1127458548
 GameObject:
@@ -2647,7 +2608,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &1127458551
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2743,13 +2703,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &1127458552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2773,7 +2730,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 169241926}
     m_Modifications:
     - target: {fileID: 6021050379952396480, guid: 58fd8678359d8c247af42bd90ac227ce,
@@ -2837,7 +2793,6 @@ PrefabInstance:
       value: SpareParts (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 58fd8678359d8c247af42bd90ac227ce, type: 3}
 --- !u!1 &1208952025
 GameObject:
@@ -2870,6 +2825,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1369282030}
+  - {fileID: 1614710760}
   m_Father: {fileID: 645098109}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2921,7 +2877,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1951301259604458476, guid: 59ef19185a9b6284582346445ba9a153,
@@ -2985,7 +2940,6 @@ PrefabInstance:
       value: Speedup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ef19185a9b6284582346445ba9a153, type: 3}
 --- !u!1 &1229215665
 GameObject:
@@ -3108,12 +3062,146 @@ RectTransform:
   m_AnchoredPosition: {x: 101.21824, y: -27.304392}
   m_SizeDelta: {x: 145.5831, y: 21.3088}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1614710757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1614710760}
+  - component: {fileID: 1614710759}
+  - component: {fileID: 1614710758}
+  m_Layer: 5
+  m_Name: value_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1614710758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614710757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 18
+  m_fontSizeBase: 18
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -0.000019089104, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1614710759
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614710757}
+  m_CullTransparentMesh: 1
+--- !u!224 &1614710760
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614710757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1208952026}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.2193, y: -0.40618}
+  m_SizeDelta: {x: 145.58, y: 21.309}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1616230339
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 305322379}
     m_Modifications:
     - target: {fileID: 3391408952415345046, guid: 40d1f227657d7d74689eaef1aef60e6c,
@@ -3177,14 +3265,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 40d1f227657d7d74689eaef1aef60e6c, type: 3}
---- !u!4 &1616230340 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5310406292060952492, guid: 40d1f227657d7d74689eaef1aef60e6c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1616230339}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1652474203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,7 +3342,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &1652474206
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3373,13 +3453,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &1652474207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3468,7 +3545,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &1751134415
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3574,13 +3650,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &1751134416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3749,7 +3822,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &1821117045
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3851,13 +3923,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &1821117046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3943,7 +4012,6 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!120 &1870129227
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4046,13 +4114,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!114 &1870129228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4124,6 +4189,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxOxygen: 100
   _oxygenDepletionRate: 1
+  _playerInput: {fileID: 1991369400}
+--- !u!114 &1991369400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3340378101270038801, guid: a65a10546e141a245860c239c6f89151,
+    type: 3}
+  m_PrefabInstance: {fileID: 3340378099761703272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991369390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32bc567ce943bc849b71079650656a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &2046466841
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -4131,7 +4209,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 5
+  serializedVersion: 4
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 1
@@ -4171,7 +4249,7 @@ LightingSettings:
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
   m_PVRMinBounces: 2
-  m_PVREnvironmentImportanceSampling: 1
+  m_PVREnvironmentMIS: 1
   m_PVRFilteringMode: 2
   m_PVRDenoiserTypeDirect: 0
   m_PVRDenoiserTypeIndirect: 0
@@ -4186,7 +4264,6 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
-  m_NumRaysToShootPerTexel: -1
 --- !u!114 &2141510513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4207,7 +4284,6 @@ MonoBehaviour:
   AutoSegments: 1
 --- !u!120 &2141510514
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4335,13 +4411,10 @@ LineRenderer:
     numCapVertices: 0
     alignment: 1
     textureMode: 1
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!68 &2141510515
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -4437,7 +4510,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 169241926}
     m_Modifications:
     - target: {fileID: 6021050379952396480, guid: 58fd8678359d8c247af42bd90ac227ce,
@@ -4501,14 +4573,12 @@ PrefabInstance:
       value: SpareParts
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 58fd8678359d8c247af42bd90ac227ce, type: 3}
 --- !u!1001 &3340378099761703272
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3340378101078080033, guid: a65a10546e141a245860c239c6f89151,
@@ -4586,6 +4656,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 2ce60e2b0cb4cd64a90c00f5266b639e, type: 2}
+    - target: {fileID: 3340378101270038801, guid: a65a10546e141a245860c239c6f89151,
+        type: 3}
+      propertyPath: NumberOfJumps
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3340378101270038801, guid: a65a10546e141a245860c239c6f89151,
         type: 3}
       propertyPath: CenterOfGravity
@@ -4677,22 +4752,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1092818531}
     m_RemovedComponents: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3340378101270038802, guid: a65a10546e141a245860c239c6f89151,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1092818529}
-    - targetCorrespondingSourceObject: {fileID: 3340378101270038802, guid: a65a10546e141a245860c239c6f89151,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1616230340}
   m_SourcePrefab: {fileID: 100100000, guid: a65a10546e141a245860c239c6f89151, type: 3}
 --- !u!1001 &3385116924163745020
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3385116923993162667, guid: 4413e1681c0295747b245b602022445a,
@@ -4756,5 +4821,4 @@ PrefabInstance:
       value: Background
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 4413e1681c0295747b245b602022445a, type: 3}

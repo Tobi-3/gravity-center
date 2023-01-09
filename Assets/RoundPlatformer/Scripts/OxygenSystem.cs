@@ -12,6 +12,9 @@ public class OxygenSystem : MonoBehaviour
     private float _currentOxygen;
     public float oxygenPercentage => _currentOxygen / _maxOxygen;
 
+    [Header("Player References")]
+    [SerializeField] private Player_Movement _playerInput;
+    
     public static UnityAction OnPlayerDied;
 
     private void Start() {
@@ -19,12 +22,22 @@ public class OxygenSystem : MonoBehaviour
     }
 
     private void Update() {
-        _currentOxygen -= _oxygenDepletionRate * Time.deltaTime;
+        
+        if(_playerInput.isMoving == false && _playerInput.isJumping == false){
+           _oxygenDepletionRate = 1f;
+        }
+        else if(_playerInput.isJumping){
+            _oxygenDepletionRate = 2.0f;
+        }
+        else if(_playerInput.isMoving){
+            _oxygenDepletionRate = 1.5f;
+        }        
+         _currentOxygen -= _oxygenDepletionRate * Time.deltaTime;
 
         if(_currentOxygen <= 0) {
             OnPlayerDied?.Invoke();
             _currentOxygen = 0f;
-        }
+        }    
     }
 
     public void ReplenishOxygen(float oxygenAmount){
