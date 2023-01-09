@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 
 public class OxygenSystem : MonoBehaviour
@@ -13,6 +14,7 @@ public class OxygenSystem : MonoBehaviour
     public float oxygenPercentage => _currentOxygen / _maxOxygen;
 
     public static UnityAction OnPlayerDied;
+    public int Respawn;
 
     private void Start() {
         _currentOxygen = _maxOxygen;
@@ -22,7 +24,8 @@ public class OxygenSystem : MonoBehaviour
         _currentOxygen -= _oxygenDepletionRate * Time.deltaTime;
 
         if(_currentOxygen <= 0) {
-            OnPlayerDied?.Invoke();
+            // OnPlayerDied?.Invoke();
+            SceneManager.LoadScene(Respawn);
             _currentOxygen = 0f;
         }
     }

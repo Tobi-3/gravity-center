@@ -12,4 +12,9 @@ public class OxygenUISystem : MonoBehaviour
     private void FixedUpdate() {
         _oxygenBar.fillAmount = _oxygenSystem.oxygenPercentage;
     }
+
+    public OxygenSystem GetOxygenSystem()
+    {
+        return _oxygenSystem;
+    }
 }
