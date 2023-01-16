@@ -157,7 +157,6 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.43359375}
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
-  m_UseDelaunayMesh: 0
 --- !u!114 &-7321484668899757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,4 +169,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251e53d7ed0910f4b931bb27cfd80248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
+  Respawn: 3
