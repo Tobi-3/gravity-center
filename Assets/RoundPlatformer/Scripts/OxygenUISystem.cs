@@ -16,4 +16,9 @@ public class OxygenUISystem : MonoBehaviour
         _oxygenBar.fillAmount = _oxygenSystem.oxygenPercentage;
         _oxygenPercentage.text = ((_oxygenSystem.oxygenPercentage)*100).ToString("N0")+"%";
     }
+
+    public OxygenSystem GetOxygenSystem()
+    {
+        return _oxygenSystem;
+    }
 }
