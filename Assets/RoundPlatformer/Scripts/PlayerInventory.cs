@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class PlayerInventory : MonoBehaviour
 {
     public int NumberOfParts{ get; private set; }
+    public bool partPickedUp;
+    public bool powerUpPickedUp;
 
     public UnityEvent<PlayerInventory> OnPartsCollected;
 
@@ -13,6 +15,7 @@ public class PlayerInventory : MonoBehaviour
     {
         NumberOfParts++;
         OnPartsCollected.Invoke(this);
+        partPickedUp = true;
     }
 
 }
