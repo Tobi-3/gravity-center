@@ -10,11 +10,13 @@ public class Speedup : MonoBehaviour
 	public float BoostedSpeed;
 
     private Player_Movement Player;
+    private PlayerInventory Inventory;
 
     // Start is called before the first frame update
     void Start()
     {   
         Player = GameObject.Find ("Player").GetComponent<Player_Movement>();    
+        Inventory = GameObject.Find ("Player").GetComponent<PlayerInventory>();
         NormalSpeed = Player.PlayerSpeed;
     }
 
@@ -29,6 +31,7 @@ public class Speedup : MonoBehaviour
         if (other.CompareTag("Player")){
 
             Player.PlayerSpeed = BoostedSpeed;
+            Inventory.powerUpPickedUp = true;
 
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<CircleCollider2D>().enabled = false;
