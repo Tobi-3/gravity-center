@@ -26,8 +26,8 @@ public class Player_Movement : MonoBehaviour{
 
 	[Tooltip("For Double Jump or more. Set to 1 for a single jump")]
 	public int NumberOfJumps;
+	public int JumpCount;
 	private bool IsGrounded;
-	private int JumpCount;
 	private float distToGround;
 	private Collider2D col;
 	public LayerMask GroundedMask;
@@ -64,7 +64,7 @@ public class Player_Movement : MonoBehaviour{
 		CalculateDistance();
 		changeGravityForce();
 		GravityDrag();
-		Debug.DrawRay(this.transform.position, -transform.up, Color.green);
+		//Debug.DrawRay(this.transform.position, -transform.up, Color.green);
 	}
 	
 	//calcs Distance between Player and Center of Gravity

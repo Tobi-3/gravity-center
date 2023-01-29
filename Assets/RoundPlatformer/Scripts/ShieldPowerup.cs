@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShieldPowerup : MonoBehaviour
 {   
+    [Header("Player References")]
+    [SerializeField] private PlayerInventory _playerInventory;
 
     private GameObject ShieldObject;
 
@@ -26,6 +28,7 @@ public class ShieldPowerup : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
+            _playerInventory.powerUpPickedUp = true;
             Destroy(gameObject);
             ShieldObject.GetComponent<SpriteRenderer>().enabled = true;
             ShieldObject.GetComponent<CircleCollider2D>().enabled = true;

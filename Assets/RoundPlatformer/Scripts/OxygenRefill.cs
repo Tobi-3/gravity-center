@@ -7,16 +7,22 @@ public class OxygenRefill : MonoBehaviour
 
     private OxygenSystem Oxygen;
     public float ReplenishAmount;
+    public bool refillig;
 
      void Start()
     {   
         Oxygen = GameObject.FindWithTag("Canvas").GetComponent<OxygenUISystem>().GetOxygenSystem();  
     }
 
+    void Update(){
+        refillig = false;
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-           Debug.Log("Triggering OnTriggerStay");
+           //Debug.Log("Triggering OnTriggerStay");
+           refillig = true;
            Oxygen.ReplenishOxygen(ReplenishAmount);
         }
     }
