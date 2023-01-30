@@ -15,7 +15,9 @@ public class OxygenSystem : MonoBehaviour
 
     [Header("Player References")]
     [SerializeField] private Player_Movement _playerInput;
-    
+    private float gravitationalImpact;
+
+
     public static UnityAction OnPlayerDied;
     public int Respawn;
 
@@ -25,16 +27,23 @@ public class OxygenSystem : MonoBehaviour
 
     private void Update() {
         
+        if(_playerInput.GravityForce > 1){
+            gravitationalImpact = _playerInput.GravityForce / 10f;
+        }else {
+            gravitationalImpact = 0f;
+        }
+
         if(_playerInput.isMoving == false && _playerInput.isJumping == false){
-           _oxygenDepletionRate = 1f;
+           _oxygenDepletionRate = 1f + gravitationalImpact;
         }
         else if(_playerInput.isJumping){
-            _oxygenDepletionRate = 2.0f;
+            _oxygenDepletionRate = 2.0f + gravitationalImpact;
         }
         else if(_playerInput.isMoving){
-            _oxygenDepletionRate = 1.5f;
-        }        
-         _currentOxygen -= _oxygenDepletionRate * Time.deltaTime;
+            _oxygenDepletionRate = 1.5f + gravitationalImpact;
+        }
+    
+         _currentOxygen -= (_oxygenDepletionRate * Time.deltaTime);
 
         if(_currentOxygen <= 0) {
             // OnPlayerDied?.Invoke();

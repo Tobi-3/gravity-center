@@ -11,6 +11,12 @@ public class Player_Movement : MonoBehaviour{
 	[Tooltip("This is the gameobject were the player is attracted to. If nothing, the player will fly, you can change that gameobject on Runtime")]
 	public GameObject CenterOfGravity;
 	public float GravityForce;
+	public float distanceToCenter;
+
+	/* this is the distance that the player has to the gravityCenter at the start of the game. 
+	This is the "default" and there will be no changes on the GravityForce if player is further away
+	than this default. Needs to be changed with the new level */
+	private float distanceOnStart; 
 	
 	public float PlayerSpeed;
 	public float MaxSpeed;
@@ -20,8 +26,8 @@ public class Player_Movement : MonoBehaviour{
 
 	[Tooltip("For Double Jump or more. Set to 1 for a single jump")]
 	public int NumberOfJumps;
+	public int JumpCount;
 	private bool IsGrounded;
-	private int JumpCount;
 	private float distToGround;
 	private Collider2D col;
 	public LayerMask GroundedMask;
@@ -42,6 +48,9 @@ public class Player_Movement : MonoBehaviour{
 		col = GetComponent<Collider2D>();
 		distToGround = col.bounds.extents.y;
 		JumpCount = 0;
+
+		//change once new leveldesign is implemented
+		distanceOnStart = 12f;
 	}
 
 
@@ -52,10 +61,23 @@ public class Player_Movement : MonoBehaviour{
 		MirrorAnimationPlayer();
 		CheckIfPlayerGrounded();
 		ResetNumberOfJumps();
+		CalculateDistance();
+		changeGravityForce();
 		GravityDrag();
-		Debug.DrawRay(this.transform.position, -transform.up, Color.green);
+		//Debug.DrawRay(this.transform.position, -transform.up, Color.green);
 	}
 	
+	//calcs Distance between Player and Center of Gravity
+	private void CalculateDistance(){
+		distanceToCenter =  Vector3.Distance(CenterOfGravity.transform.position, this.transform.position);
+	}
+
+	//increases the grav Pull when closer to the Gravity Center
+	private void changeGravityForce(){
+		if(distanceToCenter < distanceOnStart){
+			GravityForce = 1 + 1 - distanceToCenter / distanceOnStart;
+		}
+	}
 
 	//This function calculate the speed limitation of the player depending of how far he is from the center of Gravity.
 	//This will prevent the player from flying if he goes too fast, too close from the center of gravity 

@@ -33,9 +33,9 @@ public class RoundPlatformer_Component : MonoBehaviour {
 	/// <summary>
 	/// The height of the platform. from 0.1f to 10.
 	/// </summary>
-	[Tooltip("Height of the platform")]
-	[Range(0.1f, 10)]
-	public float Height;
+	// [Tooltip("Height of the platform")]
+	// [Range(0.1f, 10)]
+	// public float Height;
 
 
 	[Tooltip("Control the Z position of the visual render of the platform. Tweak this value if you want to have your platform in front or behind another element.")]
@@ -107,8 +107,8 @@ public class RoundPlatformer_Component : MonoBehaviour {
 	private const float RadiusToSegments = 6F; //Don't touch this either.
 
 	public void RespectTextureRatio(){
-		Segments = Mathf.RoundToInt(Width / AngleToSegments);
-		// Segments = Mathf.RoundToInt(((Width / RadiusToSegments)/10) * Position);
+		// Segments = Mathf.RoundToInt(Width / AngleToSegments);
+		Segments = Mathf.RoundToInt(((Width / RadiusToSegments)/10) * Position);
 	}
 
 
