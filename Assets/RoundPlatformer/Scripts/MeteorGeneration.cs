@@ -4,38 +4,38 @@ using UnityEngine;
 
 public class MeteorGeneration : MonoBehaviour
 {   
-    public GameObject MeteorPrefab;
+    public GameObject[] MeteorPrefabs;
+    public float MinMeteorSize;
+    public float MaxMeteorSize;
     public GameObject GravityCenter;
     public float SpawningDistanceToCenter;
     public int SpawningRange;
-    public float meteorSpawnInterval;
-    public int maxMeteorAmount;
-    private float meteorStartingDistance;
-    private List<GameObject> meteors;
-    private float lastSpawn;
-    private float minMeteorSize;
-    private float maxMeteorSize;
-    private float meteorSize;
-    private Vector3 meteorPosition;
+    public float MeteorSpawnInterval;
+    public int MaxMeteorAmount;
+    private float MeteorStartingDistance;
+    private List<GameObject> Meteors;
+    private float LastSpawn;
+    private float MeteorSize;
+    private Vector3 MeteorPosition;
     
 
     // Start is called before the first frame update
     void Start()
     {   
-        minMeteorSize = 0.5f;
-        maxMeteorSize = 4.0f; 
-        meteors = new List<GameObject>();
-        lastSpawn = Time.time - meteorSpawnInterval; // immediatley spawn first meteor
+        MinMeteorSize = 0.5f;
+        // MaxMeteorSize = 4.0f; 
+        Meteors = new List<GameObject>();
+        LastSpawn = Time.time - MeteorSpawnInterval; // immediatley spawn first meteor
       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastSpawn >= meteorSpawnInterval)
+        if (Time.time - LastSpawn >= MeteorSpawnInterval)
         {      
-            lastSpawn = Time.time;
-            meteorSize = Random.Range(minMeteorSize, maxMeteorSize);
+            LastSpawn = Time.time;
+            MeteorSize = Random.Range(MinMeteorSize, MaxMeteorSize);
 
             // spawn a meteor at a random position with some distance to the center
             do
@@ -43,11 +43,11 @@ public class MeteorGeneration : MonoBehaviour
                 int meteorX = Random.Range(-SpawningRange, SpawningRange);
                 int meteorY = Random.Range(-SpawningRange, SpawningRange);
 
-                meteorPosition = new Vector3(meteorX, meteorY);
+                MeteorPosition = new Vector3(meteorX, meteorY);
                 
-            } while (Vector3.Distance(meteorPosition, GravityCenter.transform.position) <= SpawningDistanceToCenter);
+            } while (Vector3.Distance(MeteorPosition, GravityCenter.transform.position) <= SpawningDistanceToCenter);
 
-            GenerateMeteor(meteorSize, meteorPosition);       
+            GenerateMeteor(MeteorSize, MeteorPosition);       
         }
     }
 
@@ -56,7 +56,7 @@ public class MeteorGeneration : MonoBehaviour
     {   
         if (collider.CompareTag("Meteor"))
         {
-            meteors.Remove(collider.gameObject);
+            Meteors.Remove(collider.gameObject);
             Destroy(collider.gameObject);
         }
     }
@@ -64,11 +64,11 @@ public class MeteorGeneration : MonoBehaviour
     // creates a new meteor GameObject 
     private void GenerateMeteor(float size, Vector3 position)
     {   
-        if (meteors.Count < maxMeteorAmount)
+        if (Meteors.Count < MaxMeteorAmount)
         {
-            GameObject newMeteor = Instantiate(MeteorPrefab, position, Quaternion.identity);
+            GameObject newMeteor = Instantiate(MeteorPrefabs[Random.Range(0,MeteorPrefabs.Length)], position, Quaternion.identity);
             newMeteor.transform.localScale = new Vector3(size,size,size);
-            meteors.Add(newMeteor);
+            Meteors.Add(newMeteor);
         }
     }
 
