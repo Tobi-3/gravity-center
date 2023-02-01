@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/RoundPlatformer/DEMO/Win Screen.unity
     guid: c16d7fae4a7847c44a9c9aa84763a141
+  - enabled: 1
+    path: Assets/Level 0.unity
+    guid: 291c5501620c37144813f5f9aa304cd5
   m_configObjects: {}
