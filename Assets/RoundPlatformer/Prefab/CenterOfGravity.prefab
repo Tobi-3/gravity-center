@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &700318536606103928
 SpriteRenderer:
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251e53d7ed0910f4b931bb27cfd80248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Respawn: 0
+  Respawn: 3
 --- !u!114 &7107213569186128279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,15 +124,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700318536606103927}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2879e4450d5584d950ccf8e1599b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MeteorPrefab: {fileID: 8173826775853185249, guid: b9e79b4b090e28645a9b6956129c8bb3,
-    type: 3}
+  MeteorPrefabs:
+  - {fileID: 8173826775853185249, guid: e35793e35ff2ffd4784e1f0bb06b73a9, type: 3}
+  - {fileID: 8173826775853185249, guid: e562af401fc20a54cbf4e0031bbcd5af, type: 3}
+  - {fileID: 8173826775853185249, guid: 47d6809fa47acae4e9d2c7767de5d5fb, type: 3}
+  - {fileID: 8173826775853185249, guid: b9e79b4b090e28645a9b6956129c8bb3, type: 3}
+  - {fileID: 8173826775853185249, guid: 7ca149cb6c8c07c49afa519763603a21, type: 3}
+  - {fileID: 8173826775853185249, guid: e12cb794d7f0bf64daf372a0d87d03e4, type: 3}
+  - {fileID: 8173826775853185249, guid: b32777be1de07374484073b517c6c1ec, type: 3}
+  - {fileID: 8173826775853185249, guid: e27a3690d1ea1aa4c8cda71f0e7677e2, type: 3}
+  - {fileID: 8173826775853185249, guid: 441c55ecf55e27442bf016ff41cb984e, type: 3}
+  - {fileID: 8173826775853185249, guid: c2f383a9664bc3343adc0f0f540d2c3f, type: 3}
+  MinMeteorSize: 0.2
+  MaxMeteorSize: 1
   GravityCenter: {fileID: 700318536606103927}
   SpawningDistanceToCenter: 25
-  SpawningRange: 50
-  meteorSpawnInterval: 1
-  maxMeteorAmount: 10
+  SpawningRange: 55
+  MeteorSpawnInterval: 5
+  MaxMeteorAmount: 10
