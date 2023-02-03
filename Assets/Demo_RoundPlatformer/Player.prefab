@@ -51,9 +51,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CenterOfGravity: {fileID: 0}
   GravityForce: 1
-  PlayerSpeed: 10
-  MaxSpeed: 10
-  JumpSpeed: 1
+  PlayerSpeed: 25
+  MaxSpeed: 50
+  JumpSpeed: 3
   NumberOfJump: 2
   GroundedMask:
     serializedVersion: 2

@@ -55,9 +55,9 @@ MonoBehaviour:
     type: 3}
   GravityForce: 1
   distanceToCenter: 0
-  PlayerSpeed: 5
-  MaxSpeed: 10
-  JumpSpeed: 1
+  PlayerSpeed: 25
+  MaxSpeed: 50
+  JumpSpeed: 3
   isMoving: 0
   isJumping: 0
   NumberOfJumps: 1

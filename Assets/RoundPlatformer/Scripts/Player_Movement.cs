@@ -50,7 +50,7 @@ public class Player_Movement : MonoBehaviour{
 		JumpCount = 0;
 
 		//change once new leveldesign is implemented
-		distanceOnStart = 12f;
+		distanceOnStart = 38f;
 	}
 
 
