@@ -39,6 +39,8 @@ public class Player_Movement : MonoBehaviour{
 	private Animator anim;
 	private float AngularSpeedLimitation;
 
+	private bool flipped = false;
+
 
 	void Start() {
 		RB2D = GetComponent<Rigidbody2D>();
@@ -89,8 +91,6 @@ public class Player_Movement : MonoBehaviour{
 
 			distance = Vector3.Distance(transform.position, CenterOfGravity.transform.position);
 			distance = distance/10;
-			Debug.Log($"distance: {distance}");
-			// Debug.Break();
 			speedLimitation = Mathf.Lerp(0.5F, 2F, distance);
 			speedLimitation = speedLimitation/5;
 
@@ -112,13 +112,24 @@ public class Player_Movement : MonoBehaviour{
 
 
 	private void On_PlayerMovement(){
-		if(Input.GetAxis("Horizontal") != 0){
+		float inputHorizontal = Input.GetAxis("Horizontal");
+		if(inputHorizontal != 0){
+			if (inputHorizontal < 0 && !flipped)
+			{
+				Flip();
+			}
+			else if(inputHorizontal > 0 && !flipped)
+			{
+				Flip();
+			}
+			anim.SetBool("PlayerMoving", true);
+
 			Vector2 localvelocity;
 			localvelocity = transform.InverseTransformDirection(RB2D.velocity);
 			localvelocity.x = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerSpeed * 100 * CalculateAngularSpeedLimitation();
 			RB2D.velocity = transform.TransformDirection(localvelocity);
 			isMoving = true;
-			anim.SetBool("PlayerMoving", true);
+			
 		}
 		else { //Slow down the player when no pressure on the Horizontal Axis (For more responsive controls).
 			
@@ -150,26 +161,17 @@ public class Player_Movement : MonoBehaviour{
 		
 		if (isGrounded()) 
 		{	
+			anim.SetBool("PlayerJumping", false);
 			IsGrounded = true;
 			isJumping = false;
-			anim.SetBool("PlayerJumping", false);
 		}
 		else {
+			anim.SetBool("PlayerJumping", true);
 			IsGrounded = false;
 			isJumping = true;
-			anim.SetBool("PlayerJumping", true);
 		}
 	}
 
-
-	private bool isGrounded2(){
-		CapsuleCollider2D capsule = GetComponent<CapsuleCollider2D>();
-		float rotation = transform.rotation.z;
-		
-		Vector2 bottomPoint = rotation * (capsule.bounds.center - capsule.bounds.extents.y * (capsule.bounds.center - CenterOfGravity.transform.position).normalized) ;
-		
-		return Physics2D.CapsuleCast(bottomPoint, capsule.size, capsule.direction, rotation, -transform.up, 1f, GroundedMask).collider != null;
-	}
 
 
 	private bool isGrounded(){
@@ -206,4 +208,14 @@ public class Player_Movement : MonoBehaviour{
 			JumpCount = 0;
 		}
 	}
+
+	private void Flip()
+	{
+		Vector3 currentScale = gameObject.transform.localScale;
+		currentScale.x *= -1;
+		gameObject.transform.localScale = currentScale;
+
+		flipped = !flipped;
+	}
 }
+
