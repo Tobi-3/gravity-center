@@ -108,7 +108,7 @@ public class RoundPlatformer_Component : MonoBehaviour {
 
 	public void RespectTextureRatio(){
 		// Segments = Mathf.RoundToInt(Width / AngleToSegments);
-		Segments = Mathf.RoundToInt(((Width / RadiusToSegments)/10) * Position);
+		Segments = Mathf.RoundToInt(((Width / RadiusToSegments)/5) * Position);
 	}
 
 
