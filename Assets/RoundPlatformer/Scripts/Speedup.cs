@@ -15,8 +15,8 @@ public class Speedup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        Player = GameObject.Find ("Player").GetComponent<Player_Movement>();    
-        Inventory = GameObject.Find ("Player").GetComponent<PlayerInventory>();
+        Player = GameObject.FindWithTag("Player").GetComponent<Player_Movement>();    
+        Inventory = GameObject.FindWithTag ("Player").GetComponent<PlayerInventory>();
         NormalSpeed = Player.PlayerSpeed;
     }
 

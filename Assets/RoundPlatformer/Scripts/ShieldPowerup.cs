@@ -14,6 +14,9 @@ public class ShieldPowerup : MonoBehaviour
     {   
         ShieldObject = GameObject.FindWithTag("Shield");  
         
+        // move shield to center of player character
+        ShieldObject.transform.position = _playerInventory.gameObject.GetComponent<Collider2D>().bounds.center;
+        
         //disable the shield if the power up hasn't been collected/wears off
         ShieldObject.GetComponent<SpriteRenderer>().enabled = false;
         ShieldObject.GetComponent<CircleCollider2D>().enabled = false;

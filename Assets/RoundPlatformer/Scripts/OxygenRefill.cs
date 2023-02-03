@@ -12,6 +12,9 @@ public class OxygenRefill : MonoBehaviour
      void Start()
     {   
         Oxygen = GameObject.FindWithTag("Canvas").GetComponent<OxygenUISystem>().GetOxygenSystem();  
+        if (Oxygen == null){
+            Oxygen = GameObject.Find("Canvas").GetComponent<OxygenUISystem>().GetOxygenSystem();
+        }
     }
 
     void Update(){
@@ -21,13 +24,10 @@ public class OxygenRefill : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player")){
-           //Debug.Log("Triggering OnTriggerStay");
            refillig = true;
            Oxygen.ReplenishOxygen(ReplenishAmount);
         }
     }
-
-	
 }
 
 
