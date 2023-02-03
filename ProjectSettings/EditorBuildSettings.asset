@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level 0.unity
     guid: 291c5501620c37144813f5f9aa304cd5
+  - enabled: 1
+    path: Assets/RoundPlatformer/DEMO/Credits.unity
+    guid: 4334a23e343c6d24090e24be6b3a1d84
+  - enabled: 1
+    path: Assets/RoundPlatformer/DEMO/How to play.unity
+    guid: 4a98932089d55d34ea4f5b9118352519
   m_configObjects: {}
