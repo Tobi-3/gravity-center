@@ -8,6 +8,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public int NumberOfParts{ get; private set; }
     public bool partPickedUp;
+    public bool magnetActivated;
     public bool powerUpPickedUp;
     public int WinScene;
     public int NrPartsNeeded;

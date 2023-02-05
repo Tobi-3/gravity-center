@@ -5,6 +5,8 @@ using UnityEngine;
 public class Magnet : MonoBehaviour
 {
 
+    [Header("Player Reference")]
+    [SerializeField] private PlayerInventory _playerInventory;
     private GameObject SparePartDetector;
     private GameObject SmallMagnet;
     public float AttractionDuration = 6f;
@@ -25,8 +27,10 @@ public class Magnet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
+        if (other.CompareTag("Player") && !_playerInventory.magnetActivated)
+        {   
+            _playerInventory.magnetActivated = true;
+            
             StartCoroutine("ActivateAttraction");
 
             // make magnet power up not interact with the player
@@ -44,6 +48,7 @@ public class Magnet : MonoBehaviour
 
         SparePartDetector.GetComponent<Collider2D>().enabled = false;
         SmallMagnet.GetComponent<SpriteRenderer>().enabled = false;
+        _playerInventory.magnetActivated = false;
         
         Destroy(gameObject);
     }
