@@ -115,4 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedCooldown: 10
-  BoostedSpeed: 10
+  BoostedSpeed: 35

@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partPickedUp: 0
+  magnetActivated: 0
   powerUpPickedUp: 0
   WinScene: 0
   NrPartsNeeded: 1
@@ -366,7 +367,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 3.5
 --- !u!1001 &1207345871159051810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -480,12 +481,12 @@ PrefabInstance:
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.006
+      value: -0.097
       objectReference: {fileID: 0}
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.474
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
@@ -495,7 +496,7 @@ PrefabInstance:
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99989796
+      value: 0.9999907
       objectReference: {fileID: 0}
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
@@ -510,7 +511,7 @@ PrefabInstance:
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.014287265
+      value: 0.004325852
       objectReference: {fileID: 0}
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
@@ -525,7 +526,7 @@ PrefabInstance:
     - target: {fileID: 3518180761239992914, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.637
+      value: 0.496
       objectReference: {fileID: 0}
     - target: {fileID: 3927458528243315609, guid: 0bc3f5b25ffbb754f808965c173a9ecf,
         type: 3}
